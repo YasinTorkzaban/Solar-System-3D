@@ -10,6 +10,7 @@ This is a 3D solar system using 3D features of CSS
 
 [![GitHub](https://img.shields.io/badge/GitHub-YasinTorkzaban-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YasinTorkzaban)
 [![Instagram](https://img.shields.io/badge/Instagram-yasintorkzaban.dev-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/yasintorkzaban.dev/?hl=en)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yasin-Torkzanan-E4405F?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yasin-torkzaban-b36171365/)
 
 - 👁‍🗨 [Demo Project]()
 - 👨🏻‍💻 Developed by Yasin Torkzaban
