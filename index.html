@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System 3D</title>
+    <link rel="stylesheet" href="assets/css/fontello.css">
+    <link rel="stylesheet" href="assets/stylesheet/footerYas.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(assets/img/space.webp);
+            background-size: cover;
+        }
+
+        .solar {
+            width: 1000px;
+            height: 600px;
+            position: relative;
+            transform-style: preserve-3d;
+            /* transform: scale(.1); */
+            /* border: 1px solid white; */
+
+            &:hover {
+                >.orbit {
+                    >.planet {
+                        transform: rotate(3600deg);
+
+                        >div {
+                            transform: rotateX(-60deg) rotateY(3600deg) rotateZ(30deg);
+                        }
+
+                        .earth {
+                            background-position: -800px 0;
+                        }
+                    }
+                }
+            }
+
+            >* {
+                border: 1px solid white;
+                position: absolute;
+                border-radius: 50%;
+                transform: rotateX(90deg);
+                transform-style: preserve-3d;
+            }
+
+            >.sun {
+                position: absolute;
+                background-image: url(assets/img/sun.png);
+                background-size: cover;
+                width: 150px;
+                height: 150px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 10px 1px orange;
+                border: none;
+                transition: 100s linear;
+            }
+
+            >.orbit {
+                >.planet {
+                    /* background-color: red; */
+                }
+            }
+
+            >.orbit1 {
+                width: 250px;
+                height: 250px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet1 {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform-style: preserve-3d;
+                    transform-origin: 135px 50%;
+                    /* background-color: red; */
+                    transition: 100s linear;
+
+                    >.mercury {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/mercury.jpg);
+                        background-size: cover;
+                        box-shadow: 0 0 10px 1px rgb(86, 86, 144);
+                        transition: 100s linear;
+                    }
+                }
+            }
+
+            >.orbit2 {
+                width: 400px;
+                height: 400px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet2 {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -15px;
+                    transform-style: preserve-3d;
+                    transform-origin: 215px 50%;
+                    transition: 200s linear;
+
+                    /* background-color: red; */
+                    >.venus {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/venus.AVIF);
+                        background-size: cover;
+                        box-shadow: 0 0 10px 1px red;
+                        transition: 200s linear;
+                    }
+                }
+            }
+
+            >.orbit3 {
+                width: 550px;
+                height: 550px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet3 {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                    transform-style: preserve-3d;
+                    transform-origin: 295px 50%;
+                    transition: 300s linear;
+
+                    /* background-color: red; */
+                    >.earth {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/earth.jpg);
+                        background-size: cover;
+                        box-shadow: 0 0 10px 1px white;
+                        transition: 300s linear;
+                    }
+                }
+            }
+
+            >.orbit4 {
+                width: 700px;
+                height: 700px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet4 {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -25px;
+                    transform-style: preserve-3d;
+                    transform-origin: 375px 50%;
+                    transition: 400s linear;
+
+                    /* background-color: red; */
+                    >.mars {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/mars.jpg);
+                        background-size: cover;
+                        box-shadow: -1px 0 10px 1px rgb(149, 15, 15);
+                        transition: 400s linear;
+                    }
+                }
+            }
+
+            >.orbit5 {
+                width: 850px;
+                height: 850px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet5 {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -35px;
+                    transform-style: preserve-3d;
+                    transform-origin: 460px 50%;
+                    transition: 500s linear;
+
+                    /* background-color: red; */
+                    >.jupiter {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/jupiter.jpg);
+                        background-size: cover;
+                        box-shadow: 0 0 10px 1px white;
+                        transition: 500s linear;
+                    }
+                }
+            }
+
+            >.orbit6 {
+                width: 1100px;
+                height: 1100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet6 {
+                    width: 80px;
+                    height: 70px;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 50%;
+                    left: -35px;
+                    transform-style: preserve-3d;
+                    outline: 20px solid rgb(163, 114, 71);
+                    outline-offset: 7px;
+                    transform-origin: 590px 50%;
+                    transition: 600s linear;
+
+                    /* background-color: red; */
+                    >.saturn {
+                        width: 70px;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/saturn.png);
+                        background-size: cover;
+                        box-shadow: 0 0 10px 1px white;
+                        transition: 600s linear;
+                    }
+                }
+            }
+
+            >.orbit7 {
+                width: 1300px;
+                height: 1300px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet7 {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                    transform-style: preserve-3d;
+                    transform-origin: 670px 50%;
+                    transition: 700s linear;
+
+                    /* background-color: red; */
+                    >.uranus {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/uranus.AVIF);
+                        background-size: cover;
+                        box-shadow: 0 0 10px 1px white;
+                        transition: 700s linear;
+                    }
+                }
+            }
+
+            >.orbit8 {
+                width: 1450px;
+                height: 1450px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotateX(70deg);
+
+                >.planet8 {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                    transform-style: preserve-3d;
+                    transform-origin: 745px 50%;
+                    transition: 800s linear;
+
+                    /* background-color: red; */
+                    >.neptune {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transform: rotateX(-60deg);
+                        background-image: url(assets/img/neptune.png);
+                        background-size: cover;
+                        box-shadow: 0 0 10px 1px white;
+                        transition: 800s linear;
+                    }
+                }
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="solar">
+        <div class="sun"></div>
+
+        <div class="orbit orbit1">
+            <div class="planet planet1">
+                <div class="mercury"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit2">
+            <div class="planet planet2">
+                <div class="venus"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit3">
+            <div class="planet planet3">
+                <div class="earth"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit4">
+            <div class="planet planet4">
+                <div class="mars"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit5">
+            <div class="planet planet5">
+                <div class="jupiter"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit6">
+            <div class="planet planet6">
+                <div class="saturn"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit7">
+            <div class="planet planet7">
+                <div class="uranus"></div>
+            </div>
+        </div>
+
+        <div class="orbit orbit8">
+            <div class="planet planet8">
+                <div class="neptune"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+
+        <!-- start socials//////// -->
+
+        <div class="social">
+
+            <!-- start rows////// -->
+
+            <div class="row row1">
+                <div class="instagram">
+                    <a href="https://www.instagram.com/yasintorkzaban.dev/?hl=en">
+                        <i class="icon-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row row2">
+                <div class="gmail">
+                    <a href="mailto:yasin.torkzaban@gmail.com">
+                        <i class="icon-mail-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row row3">
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/yasin-torkzaban-b36171365/">
+                        <i class="icon-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row row4">
+                <div class="github">
+                    <a href="https://github.com/YasinTorkzaban">
+                        <i class="icon-github-circled-alt2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- end of rows///// -->
+
+        </div>
+
+        <!-- end of socials///// -->
+
+        <!-- start profile///// -->
+
+        <img class="profile" src="assets/img/yas.JPG" alt="">
+
+        <!-- end of profile///////// -->
+
+    </div>
+</body>
+
+</html>
